@@ -15,6 +15,7 @@ const NavBar = () => {
                 <li><Link to="/rent">Rent Property</Link></li>
                 <li><Link to="/properties">Property Listing</Link></li>
                 <li><Link to="/signin">Sign In</Link></li> 
+                <li><Link to="/users">Users</Link></li> 
             </ul>
         </nav>
     );

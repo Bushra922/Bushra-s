@@ -1,31 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const BuyProperty = () => {
-    const [propertyDetails, setPropertyDetails] = useState({
-        propertyName: " Property",
-        price: 100000, // Price in dollars
-        location: " City",
-        isSold: false
-    });
-
+const BuyProperty = ({ property }) => {
     const handleBuyProperty = () => {
-        // Add logic to handle property purchase////////////
+        // Add logic to handle property purchase
         console.log("Property purchased!");
-        //////////////
-        setPropertyDetails({
-            ...propertyDetails,
-            isSold: true
-        });
     };
 
     return (
         <div>
-            <h1>{propertyDetails.propertyName}</h1>
-            <p>Price: ${propertyDetails.price}</p>
-            <p>Location: {propertyDetails.location}</p>
-            <p>Status: {propertyDetails.isSold ? 'Sold' : 'Available'}</p>
-            <button onClick={handleBuyProperty} disabled={propertyDetails.isSold}>
-                {propertyDetails.isSold ? 'Sold Out' : 'Buy Now'}
+            <h2>{property.propertyName}</h2>
+            <p>Location: {property.location}</p>
+            <p>Price: ${property.price}</p>
+            <p>Status: {property.status}</p>
+            <button onClick={handleBuyProperty} disabled={!property.readyToBuy || property.status !== 'Available'}>
+                {property.status === 'Available' ? 'Buy Now' : 'Sold Out'}
             </button>
         </div>
     );
