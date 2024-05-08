@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 export default function BuyPropertyListing() {
     const [properties, setProperties] = useState([]);
     const [editingProperty, setEditingProperty] = useState(null); 
-    const API_URL = 'http://localhost:5050/buy-properties/seed';
+    const API_URL = 'http://localhost:5050/buy-properties';
 
     useEffect(() => {
         console.log("Fetching properties...");
