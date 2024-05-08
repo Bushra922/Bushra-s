@@ -16,8 +16,7 @@ Node.js
 Express.js
 MongoDB
 TypeScript
-Axios
-JSON Web Tokens (JWT) for authentication
+JSON 
 React for frontend development
 
 Installation
